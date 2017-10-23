@@ -3,16 +3,16 @@ This project demonstrates NESTED LOOPS (i.e., loops within loops)
 in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Dabin_Choi
+"""  # T ODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
     """ Calls the other functions to test them. """
-    run_test_triangle_right_justified()
-    run_test_triangle_upside_down()
-    run_test_vee()
-    run_test_numbers_constant_forward()
+    # run_test_triangle_right_justified()
+    # run_test_triangle_upside_down()
+    # run_test_vee()
+    #run_test_numbers_constant_forward()
     run_test_numbers_constant_backwards()
     run_test_numbers_increasing_forward()
 
@@ -38,6 +38,16 @@ def run_test_triangle_right_justified():
 
 
 def triangle_right_justified(r):
+    for k in range(r):
+
+        for j in range(r-k-1):
+            print (' ', end='')
+
+        for e in range(k+1):
+            print (e+1, end='')
+
+        print ()
+
     """
     Prints a triangle of numbers, with r rows.
     It looks the same as a previous example, but right-justified.
@@ -55,7 +65,7 @@ def triangle_right_justified(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # TO DO: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: Do the following problem FIRST, then convert x's to spaces:
@@ -96,6 +106,13 @@ def run_test_triangle_upside_down():
 
 
 def triangle_upside_down(r):
+    for k in range(r):
+
+        for j in range(k):
+            print (' ', end='')
+        for e in range(r-k):
+            print (e+1, end='')
+        print ()
     """
     Prints a triangle of numbers, with r rows.
     It looks the same as the previous problem,
@@ -109,7 +126,7 @@ def triangle_upside_down(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # TOD O: 3. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -140,6 +157,21 @@ def run_test_vee():
 
 
 def vee(r):
+    for k in range (r):
+        for j in range(k):
+            print(' ', end='')
+        for a in range(r-k):
+            print (1+a, end='')
+
+        print ('-', end = '')
+
+
+
+
+        for c in range(r-k-1,-1,-1):
+            print (c+1, end='')
+        print ()
+
     """
     Prints a "V" of numbers, with r rows.
     It looks like this example, when r = 5:
@@ -160,7 +192,7 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # TOD O: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -191,6 +223,11 @@ def run_test_numbers_constant_forward():
 
 
 def numbers_constant_forward(r, maxnum, n):
+    for k in range(r):
+        for j in range(maxnum):
+            for q in range(n):
+                print
+
     """
     Prints a rectangle of numbers, with r rows.
     Each row has n 1s, then a space, then n 2s,
@@ -216,7 +253,7 @@ def numbers_constant_forward(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # TOD O: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: What loop structure do you need for this problem?
@@ -227,7 +264,12 @@ def numbers_constant_forward(r, maxnum, n):
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
-
+    for k in range (r):
+        for j in range(maxnum):
+            for i in range(n):
+                print (j+1, end = '')
+            print (' ',end='')
+        print ()
 def run_test_numbers_constant_backwards():
     """ Tests the    numbers_constant_backwards    function. """
     print()
@@ -260,7 +302,7 @@ def numbers_constant_backwards(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # T ODO: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -268,7 +310,12 @@ def numbers_constant_backwards(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for k in range (r):
+        for j in range(maxnum):
+            for i in range(n):
+                print (maxnum-j, end='')
+            print (' ', end='')
+        print ()
 
 def run_test_numbers_increasing_forward():
     """ Tests the    numbers_increasing_forward    function. """
@@ -312,7 +359,7 @@ def numbers_increasing_forward(r, maxnum):
     Preconditions:  r and maxnum are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # TOD O: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -320,7 +367,12 @@ def numbers_increasing_forward(r, maxnum):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for k in range(r):
+        for e in range (maxnum):
+            for j in range (e+1):
+                print (1+e,end='')
+            print (' ',end='')
+        print ()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
